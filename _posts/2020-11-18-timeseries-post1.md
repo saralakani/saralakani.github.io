@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Timeseries, RAN experiemnt
+title: Post on Timeseries
 date: 2020-11-18 08:16 -0500
 category: Timeseries
 tags: ML
 ---
 
 
-testing the new post
+Testing the new post
 
-## more stuff comming soon
+# LTE/5G RAN experiemnt
 
-see you later
+for more details, check out [Timeseries Projects](/timeseries-projects)

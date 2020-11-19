@@ -3,17 +3,17 @@ layout: page
 title: About
 permalink: /about/
 ---
-Hello World!
+Hello! My name is Sara Lakani. With a background on computer science and electrical engineering, I try to feed my enthiusiasm on Artificial Intelligence topics by learning and experiementing the technologies in that domain.
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+  Many of us search the web to find their answers, read it and move on it, and when the question rise again you need to go through the same hassle. This is one of my motivations to write here, so I will not lose track of gathering valuable knowledge and maybe can be useful for someone else in the world wide web too.
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+In this blog I intend to document and organize my notes throughout my journey in learning new skills. and the topics are including but not limited to:
 
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
+  * Machine learning models
+  * Feature engineering
+  * Model testing and tuning
+  * Application of different ML/DL techniques in different fields
+  
+   I commit to myself to try my best to be accurate and referencing any piece of info I mention here.
 
-
-[jekyll-organization]: https://github.com/jekyll
+  Let's get started...Shall we?
