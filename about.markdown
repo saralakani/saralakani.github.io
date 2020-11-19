@@ -3,6 +3,7 @@ layout: page
 title: About
 permalink: /about/
 ---
+![coffee cup](/images/Quote.jpg)
 Hello! My name is Sara Lakani. With a background on computer science and electrical engineering, I try to feed my enthiusiasm on Artificial Intelligence topics by learning and experiementing the technologies in that domain.
 
   Many of us search the web to find their answers, read it and move on it, and when the question rise again you need to go through the same hassle. This is one of my motivations to write here, so I will not lose track of gathering valuable knowledge and maybe can be useful for someone else in the world wide web too.
