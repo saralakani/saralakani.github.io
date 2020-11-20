@@ -16,10 +16,10 @@ I intend to gather info around topics including but not limited to:
 * Model testing and tuning
 * Application of different ML/DL techniques in different fields
 
-Many of us search the web to find their answers, read it and move on it, and when the question rise again you need to go through the same hassle. This is one of my motivations to write here, so I will not lose track of gathering valuable knowledge and maybe can be useful for someone else in the world wide web too.
+Many of us search the web to find information, read and then move on it, and when the need rises again you need to go through the same hassle. This is why I decided to write here, so I keep track of gathering valuable knowledge which can also be useful for others.
 
 My plan is to populate this blog alongside of learning new topics and doing new experiments.
 
-I commit to myself to try my best to be accurate and referencing any piece of info I mention here.
+I commit to myself to try my best to be accurate and to cite any piece of info I mention here.
 
 Let's get started...Shall we?
