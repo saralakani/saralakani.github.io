@@ -6,10 +6,10 @@
 # --- Required options --- #
 
 # Name of website
-title: My Website
+title: Sara is cooking code here
 
 # Your name to show in the footer
-author: Some Person
+author: Sara Lakani
 
 # --- List of links in the navigation bar --- #
 
@@ -39,14 +39,14 @@ round-avatar: true
 # Select the social network links that you want to show in the footer.
 # Uncomment the links you want to show and add your information to each one.
 social-network-links:
-  email: "someone@example.com"
-  facebook: deanattali
-  github: daattali
-  twitter: daattali
-  patreon: DeanAttali
-  youtube: c/daattali
+  email: "sara.lakani.ai@gmail.com"
+  #facebook: deanattali
+  github: saralakani
+  #twitter: daattali
+  #patreon: DeanAttali
+  #youtube: c/daattali
 #  reddit: yourname
-#  linkedin: daattali
+  linkedin: linkedin.com/in/saralakani
 #  xing: yourname
 #  stackoverflow: "3943160/daattali"
 #  snapchat: deanat78
@@ -70,14 +70,15 @@ rss-description: This website is a virtual proof that I'm awesome
 
 # Select which social network share links to show in posts
 share-links-active:
-  twitter: true
-  facebook: true
+  email: true
+  twitter: false
+  facebook: false
   linkedin: true
   vk: false
 
 # How to display the link to your website in the footer
 # Remove this if you don't want a link in the footer
-url-pretty: "MyWebsite.com"
+# url-pretty: "MyWebsite.com"
 
 # Excerpt word length - Truncate the excerpt of each post on the feed page to the specified number of words
 excerpt_length: 50
@@ -89,7 +90,7 @@ feed_show_excerpt: true
 feed_show_tags: true
 
 # The keywords to associate with your website, for SEO purposes
-#keywords: "my,list,of,keywords"
+keywords: "AI,Machine leaning, deep learning"
 
 # --- Colours / background image --- #
 
