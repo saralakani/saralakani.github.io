@@ -20,27 +20,28 @@ As soon as you learn about Github pages, the word [Jekyll](https://docs.github.c
 3- I found out that the online course I have been following was using Athena theme which is not compatible with github pages (I wasted good amount of time searching why my github page is blank however github has already sent me an email saying I am using Athena theme which is not compatible with the github pages ). At this point I also learnt that I can clone one of the available [repos](https://github.com/topics/jekyll-theme) that provide sample github pages with compatible theme. I made a new website using the repo from [Beautifull Jekyll theme](https://github.com/daattali/beautiful-jekyll) and it worked well when I tried it on my github page. However, the problem here was that it gave me error when deploying it on my local computer.
 
 4- Again after few trials and search, I realized the repo I selected is not compatible with the Jekyll config on my local computer and it misses two RubyGems. This has been resolved by running follwong commands:
-~~~
-gem install tzinfo
-gem install tzinfo-data
-~~~
-In addition, I added two new lines as
-~~~
- gem "tzinfo"
- gem "tzinfo-data"
-~~~ 
-in my Gemfile. Next, I updated the _Gemfile.lock_ file with the latest version of tzinfo and tzinfo-data that I have installed ( you can check versions online [here](https://rubygems.org/search?utf8=%E2%9C%93&query=tzinfo)), as two new lines:
-~~~
+ ~~~
+    gem install tzinfo
+    gem install tzinfo-data
+ ~~~
+ In addition, I added two new lines as
+ ~~~
+    gem "tzinfo"
+    gem "tzinfo-data"
+ ~~~ 
+ in my Gemfile. Next, I updated the _Gemfile.lock_ file with the latest version of tzinfo and tzinfo-data that I have installed ( you can check versions online [here](https://rubygems.org/search?utf8=%E2%9C%93&query=tzinfo)), as two new lines:
+ ~~~
     tzinfo (2.0.3)
-      concurrent-ruby (~> 1.0)
+    concurrent-ruby (~> 1.0)
     tzinfo-data (1.2020.4)
-      tzinfo (>= 1.0.0)
-~~~
+    tzinfo (>= 1.0.0)
+ ~~~
+
 5- Finally I got my site up locally after running the command 
-~~~
-bundle exec jekyll serve
-~~~
-Voila! now you can go to the address where jekyll serves your website locally which by default is _http://127.0.0.1:4000_. Every update in your website is visible by refreshing this locall address except changes in the __config.yml_ file which needs you to stop the server by _ctrl c_.
+ ~~~
+    bundle exec jekyll serve
+ ~~~
+ Voila! now you can go to the address where jekyll serves your website locally which by default is _http://127.0.0.1:4000_. Every update in your website is visible by refreshing this locall address except changes in the __config.yml_ file which needs you to stop the server by _ctrl c_.
 
 It is by far easier to write posts and pages in markdown language than HTML. I tried this short [tutorial on Markdown](https://www.markdowntutorial.com/). So I definitely recommend this resource.
 
