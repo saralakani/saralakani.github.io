@@ -1,32 +1,49 @@
 ---
 layout: post
 title: How I made my first Github page
-subtitle: Descriptions of steps and resources I uses
-cover-img: /assets/img/github_pages.jpg
+subtitle: Descriptions of steps and resources I used
 thumbnail-img: /assets/img/github_pages.jpg
-#share-img: /assets/img/path.jpg
-tags: [github pages]
+share-img: /assets/img/github_pages.jpg
+tags: [Github pages, Jekyll]
 ---
 
 Every story starst with google search!
-I did my serach, checked courses, trial and error, doing and deleting, and finally my efforts ended to a place I like to call it my Github page.
+I did my search, checked courses, trials and errors, doing and deleting, and finally my efforts ended to a place I like to call it my Github page.
 
 Since I am lazy and not a particular fan of writing novel! I try to briefly mention the steps that worked for me and my resources in this journey.
 
-* 1- First we need to know what is github pages. Start with reading [About Github Pages](https://docs.github.com/en/free-pro-team@latest/github/working-with-github-pages/about-github-pages). Here I learnt that Github pages is a place for me to blog as well as show case my experiemts. And good news, it is free! As soon as you learn about Github pages, the work [Jekull](https://docs.github.com/en/free-pro-team@latest/github/working-with-github-pages/about-github-pages-and-jekyll) becomes familiar to you, which is a static site generator with built-in support for GitHub Pages and a simplified build process. So next I had to learn more about Jekyll.
+* 1- First we need to know what is github pages. I have learnt that [Github pages](https://docs.github.com/en/free-pro-team@latest/github/working-with-github-pages/about-github-pages) is a place for blogging as well as show casing potfolios. And good news, it is free!
+As soon as you learn about Github pages, the word [Jekyll](https://docs.github.com/en/free-pro-team@latest/github/working-with-github-pages/about-github-pages-and-jekyll) becomes familiar to you, which is a static site generator software with built-in support for GitHub Pages and a simplified build process. So next I had to learn more about Jekyll.
 
-* 2- I had no idea what is it all about, so started to for online-courses, and [this one](https://www.lynda.com/GitHub-tutorials/Learning-Static-Site-Building-Jekyll/761964-2.html) in linkedin learning gave me a feel of what my path I will be in. I started to follow the course and made my first locally hosted website with Jekyll. Although this course gave me thegeneral idea, I could not deloy my site on the github pages platform and it only gave me blank website.
+* 2- I had no idea what is it all about, so started to look for online-courses, and [this one](https://www.lynda.com/GitHub-tutorials/Learning-Static-Site-Building-Jekyll/761964-2.html) in linkedin learning gave me a feel of what path I will be in. I started to follow the course and made my first locally hosted website with Jekyll. Although this course gave me the general idea, I could not deloy my site on the github pages platform and it only gave me blank website. Step 3 describes how I fixed this problem. I found another great resource to learn about github pages which is [this one](http://jmcglone.com/guides/github-pages/) by Jonathan McGlone. But be aware that this tutorial misses the part to show you how to do Jekyll site deployment on your local computer and is only useful if you want to do everything online on the github.
 
-* 3- I found out that that online course was using Athena theme which is not compatible with github pages (I waisted good amount of time searching why my github page is blanck however github has laready sent me an email to me saying I am using Athena theme which is not compatible with the github pages ). At this point I also learnt that I can clone one of the available [repos](https://github.com/topics/jekyll-theme) that provide sample github pages with compatible theme. I selected [Beautifull Jekyll](https://github.com/daattali/beautiful-jekyll) and it worked when I tried it on my github page. However, the problem here was that I could not deploy it on my local computer.
+* 3- I found out that the online course I have been following was using Athena theme which is not compatible with github pages (I wasted good amount of time searching why my github page is blank however github has already sent me an email saying I am using Athena theme which is not compatible with the github pages ). At this point I also learnt that I can clone one of the available [repos](https://github.com/topics/jekyll-theme) that provide sample github pages with compatible theme. I made a new website using the repo from [Beautifull Jekyll theme](https://github.com/daattali/beautiful-jekyll) and it worked well when I tried it on my github page. However, the problem here was that it gave me error when deploying it on my local computer.
 
-* 4- Again after sme trial and search, I realized the repos I selected is not compatible with the Jekyll config on my local computer. This has been resolved by:
+* 4- Again after few trials and search, I realized the repo I selected is not compatible with the Jekyll config on my local computer and it misses two RubyGems. This has been resolved by running follwong commands:
 ~~~
 gem install tzinfo
 gem install tzinfo-data
 ~~~
-and then in my Gemfile, i added:
+In addition, I added two new lines as
+~~~
+ gem "tzinfo"
+ gem "tzinfo-data"
+~~~ 
+in my Gemfile. Next, I updated the _Gemfile.lock_ file with the latest version of tzinfo and tzinfo-data that I have installed ( you can check versions online [here](https://rubygems.org/search?utf8=%E2%9C%93&query=tzinfo)), as two new lines:
+~~~
+    tzinfo (2.0.3)
+      concurrent-ruby (~> 1.0)
+    tzinfo-data (1.2020.4)
+      tzinfo (>= 1.0.0)
+~~~
+Finally I got my site up locally after running the command 
+~~~
+bundle exec jekyll serve
+~~~
+Voila! now you can go to the address where jekyll serves your website locally which by default is _http://127.0.0.1:4000_. Every update in your website is visible by refreshing this locall address except changes in the __config.yml_ file which needs you to stop the server by _ctrl c_.
 
-* 5- It is by far easier to write posts and pages in markdown language than HTML. I tried this short [tutorial on Markdown](https://www.markdowntutorial.com/).
+It is by far easier to write posts and pages in markdown language than HTML. I tried this short [tutorial on Markdown](https://www.markdowntutorial.com/). So I definitely recommend this resource.
+
 
 
 
