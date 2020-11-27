@@ -43,7 +43,17 @@ As soon as you learn about Github pages, the word [Jekyll](https://docs.github.c
  ~~~
  Voila! now you can go to the address where jekyll serves your website locally which by default is _http://127.0.0.1:4000_. Every update in your website is visible by refreshing this locall address except changes in the __config.yml_ file which needs you to stop the server by _ctrl c_.
 
-It is by far easier to write posts and pages in markdown language than HTML. I tried this short [tutorial on Markdown](https://www.markdowntutorial.com/). So I definitely recommend this resource.
+6- After these steps you have a localy running website and if you have commited and pushed your changes to your github pages repos, your github page will also work. I will put the required git commands here using git command line (make sure you are in the directory where your jekyll website is built):
+ ~~~
+    $git init   #to start the empty repos in your local computer. this command you just run it once. but the following commands needed to be done every time you want to push changes from local repos to your github page repos
+    $git remote add origin https://github.com/yourgithubyousername/yourgithubyousername.github.io.git   #adding the address of your github pages link as your remote repos. The address is always your github username following _.github.io.git_
+    $git add --all   #to include all your file in the current directory in the local repos
+    $git commit -m "Your commit comment goes here"   #commit your changes
+    $git -u origin master   #to push the changes to the master branch in the github repos
+ ~~~
+ If all the steps have been completed successfully, your website is ready for public access under the link address _yourgithubusername.github.io_ .
+
+Last tip for writing posts or pages, it is by far easier to write them in markdown language than HTML. I tried this short [tutorial on Markdown](https://www.markdowntutorial.com/) which gives you a good foundation.
 
 
 
