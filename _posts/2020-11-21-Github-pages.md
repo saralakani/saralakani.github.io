@@ -10,7 +10,7 @@ tags: [Github pages, Jekyll]
 Every story starst with google search!
 I did my search, checked courses, trials and errors, doing and deleting, and finally my efforts ended to a place I like to call it my Github page.
 
-Since I am lazy and not a particular fan of writing novel! I try to briefly mention the steps that worked for me and my resources in this journey.
+Since I am lazy and not a professional writer, I try to briefly mention the steps that worked for me and my resources in this journey.
 
 1- First we need to know what is github pages. I have learnt that [Github pages](https://docs.github.com/en/free-pro-team@latest/github/working-with-github-pages/about-github-pages) is a place for blogging as well as show casing potfolios. And good news, it is free!
 As soon as you learn about Github pages, the word [Jekyll](https://docs.github.com/en/free-pro-team@latest/github/working-with-github-pages/about-github-pages-and-jekyll) becomes familiar to you, which is a static site generator software with built-in support for GitHub Pages and a simplified build process. So next I had to learn more about Jekyll.
