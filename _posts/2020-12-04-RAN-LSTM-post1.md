@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Supervised learning with LSTM
+title: Supervised learning with LSTM - post 1 Data prep
 subtitle: A trial with LTE/5G Radio Access Network data
 #cover-img: /assets/img/path.jpg
 thumbnail-img: /assets/img/5G_logo.png
@@ -16,7 +16,8 @@ Simplifying the calculation complexity of CQI has become my motivaion to design 
 
 ## Data Exploration
 
-For this very first experiment, I have found a [data set](https://crawdad.org/eurecom/elasticmon5G2019/20190828/index.html) that includes _SNR_ and _CQI_ in a **LTE/5G** RAN setting. The data is recorded in a scenario with one eNB and a single mobile User Equipment (UE) in five different mobility scenarios by following different motions and distance patterns relative to the eNB. I have chosen the data record where the UE  moves  back and forth  relative to  the  eNB, from  a  0 distance up to approximately 10 meters. Another important note is that the UE used for this data set is an Android v8.0 (Oreo) Nexus 6P phone connected to an eNB (carrier band 7). Based on the [documantation](https://www.researchgate.net/publication/337103962_Dataset_of_4G_and_5G_RAN_monitoring_data_collected_using_ElasticMon_5G_monitoring_framework_over_FlexRan) of this data set, _CQI_ value is sometimes erroneous and needs to be corrected using median or mean of the neighboring rows. I plotted that value versus time which gives me a good visibility of what outliers look like.
+For this very first experiment, I have found a [data set](https://crawdad.org/eurecom/elasticmon5G2019/20190828/index.html) that includes _SNR_ and _CQI_ in a **LTE/5G** RAN setting. The data is recorded in a scenario with one eNB and a single mobile User Equipment (UE) in five different mobility scenarios by following different motions and distance patterns relative to the eNB. I have chosen the data record where the UE  moves  back and forth  relative to  the  eNB, from  a  0 distance up to approximately 10 meters. Another important note is that the UE used for this data set is an Android v8.0 (Oreo) Nexus 6P phone connected to an eNB (carrier band 7). In this data set we are intereted in _RSRP_, _RSRQ_ which collectively represent _SNR_ value, as well as _CQI_. Check this [read](https://www.cablefree.net/wirelesstechnology/4glte/rsrp-rsrq-measurement-lte/#:~:text=In%20LTE%20network%2C%20a%20UE,(Reference%20Signal%20Received%20Quality).&text=The%20RSRQ%20measurement%20provides%20additional,handover%20or%20cell%20reselection%20decision.) to get some info on _RSRP_ and _RSRQ_.
+Based on the [documantation](https://www.researchgate.net/publication/337103962_Dataset_of_4G_and_5G_RAN_monitoring_data_collected_using_ElasticMon_5G_monitoring_framework_over_FlexRan) of this data set, _CQI_ value is sometimes erroneous and needs to be corrected using median or mean of the neighboring rows. I plotted that value versus time which gives me a good visibility of what outliers look like.
 
 ![_CQI_ outliers](/assets/img/CQI_outliers.png "CQI versus time stamp")
 
@@ -39,7 +40,7 @@ You can see that _CQI_ is almost following a considtent pattern except one point
 
 You can check out more details of exploring data and finding useful features that I have presented in this [notebook](https://github.com/saralakani/ML_RAN/blob/master/4gV5gRAN.data_exp.ipynb).
 
-In this data set we are intereted in _RSRP_, _RSRQ_ which collectively represent _SNR_ value, as well as _CQI_. After some initial data cleaning, we see that we have 6532 rows. My essential toolbox of exploratory pandas dataframe methods (after reading the data set into pandas dataframe) are as below which help me to do a better **Feature Selection** job:
+My essential toolbox of exploratory pandas dataframe methods (after reading the data set into pandas dataframe) are as below which help me to do a better **Feature Selection** job:
 ~~~
  data.info() #shows the type of values e.g. int64
  data.corr() #shows the correlation between columns
@@ -54,7 +55,7 @@ Method _corr()_ can help to reduce features in the sense that if you see two fea
 | rsrq | 0.786645 | 1.000000 | 0.849339
 | wbcqi | 0.807675 | 0.849339 | 1.000000
 
-Method _info()_ tells us that all the three features above are integer valuse and we have 6532 rows. Method _describe()_ can give insight if the data characteristics as well as checking if data is erroneous, like if you see the min and max values are not reasonable.
+Method _info()_ tells us that all the three features above are integer valuse and we have 6532 rows. Method _describe()_ can give insight of the data characteristics as well as checking if data is erroneous, like if you see the min and max values are not reasonable.
 
 Visualization also helps to have a better understanding of the feature behavior. 
 
@@ -64,9 +65,7 @@ Visualization also helps to have a better understanding of the feature behavior.
 
 ![_RSRQ_ vs _time stamp_](/assets/img/rsrqVScqi.png "_RSRQ_ vs _time stamp_")
 
-At this point we decide to stick to _RSRP_ and _RSRQ_ as our feature set and ignore time stamp because neiher _CQI_ calculation nor signal strenght are functions of time. In the next step we prepare our data for a supervised learning regression model.
-
-## Data prep  
-So far we know that we have integer data
+At this point we decide to stick to _RSRP_ and _RSRQ_ as our feature set and ignore time stamp because neiher _CQI_ calculation nor signal strenght are functions of time. In the next post we prepare our data for a supervised learning regression model.
+s
 
 
