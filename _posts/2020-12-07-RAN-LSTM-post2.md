@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Supervised learning with LSTM- post 2 Model prep
+title: Supervised learning with LSTM- Model prep
 subtitle: A trial with LTE/5G Radio Access Network data
 #cover-img: /assets/img/path.jpg
 thumbnail-img: /assets/img/5G_logo.png
