@@ -1,11 +1,11 @@
 ---
 layout: post
-title: Supervised learning with LSTM - Data prep
+title: Example of dara preparation
 subtitle: A trial with LTE/5G Radio Access Network data
 #cover-img: /assets/img/path.jpg
 thumbnail-img: /assets/img/5G_logo.png
 #share-img: /assets/img/path.jpg
-tags: [LSTM, RAN, 5G, LTE, Machine learning, supervised learning]
+tags: [Data preparation, RAN, 5G, LTE, Machine learning]
 ---
 
 ## Where to start...
@@ -24,8 +24,7 @@ Based on the [documantation](https://www.researchgate.net/publication/337103962_
 I use the following code to replace outliers:
 
 ~~~
- #replacing outliers, note that it can be seen that the wbcqi=0 is outside of the normal pattern. So we take it 
- #as outlier and replace it with mean of wbcqi value in two neighboring rows
+ #replacing outliers, note that it can be seen that the wbcqi=0 is outside of the normal #pattern. So we take it as outlier and replace it with mean of wbcqi value in two #neighboring rows
  outlier_index=list(data2[data2['wbcqi']==0].index)
  for i in outlier_index:
     data2.iloc[i]['wbcqi']=abs(0.5*(data2.iloc[i-1]['wbcqi']+data2.iloc[i+1]['wbcqi'] ))
@@ -40,7 +39,7 @@ You can see that _CQI_ is almost following a considtent pattern except one point
 
 You can check out more details of exploring data and finding useful features that I have presented in this [notebook](https://github.com/saralakani/ML_RAN/blob/master/4gV5gRAN.data_exp.ipynb).
 
-My essential toolbox of exploratory pandas dataframe methods (after reading the data set into pandas dataframe) are as below which help me to do a better **Feature Selection** job:
+My essential toolbox of exploratory pandas dataframe methods (after reading the data set into pandas dataframe) are listed below which help me to do a better **Feature Selection** job:
 ~~~
  data.info() #shows the type of values e.g. int64
  data.corr() #shows the correlation between columns
@@ -65,7 +64,5 @@ Visualization also helps to have a better understanding of the feature behavior.
 
 ![_RSRQ_ vs _time stamp_](/assets/img/rsrqVScqi.png "_RSRQ_ vs _time stamp_")
 
-At this point we decide to stick to _RSRP_ and _RSRQ_ as our feature set and ignore time stamp because neiher _CQI_ calculation nor signal strenght are functions of time. In the next post we prepare our data for a supervised learning regression model.
-s
-
+At this point we decide to stick to _RSRP_ and _RSRQ_ as our feature set and ignore time stamp because neiher _CQI_ calculation nor signal strenght are functions of time.
 
