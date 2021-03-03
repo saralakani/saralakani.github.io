@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Optimizing Depp Learning Models
+title: Optimizing Deep Learning Models
 #subtitle: 
 #cover-img: /assets/img/path.jpg
 #thumbnail-img: /assets/img/validation.png
