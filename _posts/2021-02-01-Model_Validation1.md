@@ -28,13 +28,13 @@ In all machine learning models, there is ways to check whether your model is wor
   * Reducing features using feature-selection algorithms.
   * Keep the features but apply Regularizing method.
         
-  Note: Regularization is a way to reduce the magnitude of parameters( known as weights in some contexts) in ML models. The regularization variable known as \(lambda\) is  multiplied to the sum of squared of model parameters and the final product is added to the cost function, where we call it a regularized cost function.
+  Note: Regularization is a way to reduce the magnitude of parameters( known as weights in some contexts) in ML models. The regularization variable known as $$lambda$$ is  multiplied to the sum of squared of model parameters and the final product is added to the cost function, where we call it a regularized cost function.
 
-  Chosing a good \(lambda\) can be a bit tricky and needs some validation approaches. Choosing a too large \(lambda\) value can lead to underfitting while too small (lambda\) may not help with overfitting.
+  Chosing a good $$lambda$$ can be a bit tricky and needs some validation approaches. Choosing a too large $$lambda$$ value can lead to underfitting while too small $$lambda$$ may not help with overfitting.
 
 
 * High Bias: This deficiency is also known as Underfitting and is the opossite of high variance situations. To remedy this issue we can apply one of the following approaches
-  * Increase the number of features. One of such methods is known as "feature Mapping". the method is to add polynomial terms of your current features. For example if you have only two features \({x_1,x_2}\) you can introduce powers and polinomial terms and increase number of feature like \({x_1,x_2,x_1x_2,x_1^2,x_2^2,x_1x_2^2,x_2x_1^2,...}\).
+  * Increase the number of features. One of such methods is known as "feature Mapping". the method is to add polynomial terms of your current features. For example if you have only two features $${x_1,x_2}$$ you can introduce powers and polinomial terms and increase number of feature like $${x_1,x_2,x_1x_2,x_1^2,x_2^2,x_1x_2^2,x_2x_1^2,...}$$.
   * Adding mode hidden layers
 
 
@@ -44,7 +44,7 @@ In all machine learning models, there is ways to check whether your model is wor
 
 4- Model accuracy: squared mean of error
 
-5- Confusion Matrix. This matrix help us to gaugae the performance of our model, specifically when using logistic regression and we want to tune the threshold of activation function. In this appraoch we need to populate the confucion matrix each time we tune the threshold. Then we can calculate the Precision (sensitivity) and recall (specificity) values and accordingly the \(F_1\)-Score, as defined below.
+5- Confusion Matrix. This matrix help us to gaugae the performance of our model, specifically when using logistic regression and we want to tune the threshold of activation function. In this appraoch we need to populate the confucion matrix each time we tune the threshold. Then we can calculate the Precision (sensitivity) and recall (specificity) values and accordingly the $$F_1$$-Score, as defined below.
 
 
 |                | Real True      | Real False    |
@@ -60,6 +60,7 @@ The \(F_1\) score is computed using precision (prec) and recall (rec):
   where        
 
   $$prec = \frac{tp}{tp + fp}$$
+  
   $$rec = \frac{tp}{tp + fn}$$
 {% endraw %}
 
