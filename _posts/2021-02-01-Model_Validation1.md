@@ -44,7 +44,7 @@ In all machine learning models, there is ways to check whether your model is wor
 
 4- Model accuracy: squared mean of error
 
-5- Confusion Matrix. This matrix help us to gaugae the performance of our model, specifically when using logistic regression and we want to tune the threshold of activation function. In this appraoch we need to populate the confucion matrix each time we tune the threshold. Then we can calculate the Precision (sensitivity) and recall (specificity) values and accordingly the $$F_1$$-Score, as defined below.
+5- Confusion Matrix. This matrix help us to gaugae the performance of our model, specifically when using logistic regression and we want to tune the threshold of activation function. In this appraoch we need to populate the confucion matrix each time we tune the threshold. Then we can calculate the Precision (or Positive Predictive Value) and recall (or sensitivity) values and accordingly the $$F_1$$-Score, as defined below.
 
 
 |                | Real True      | Real False    |
@@ -60,8 +60,8 @@ The \(F_1\) score is computed using precision (prec) and recall (rec):
   where        
 
   $$prec = \frac{tp}{tp + fp}$$
-  
-  $$rec = \frac{tp}{tp + fn}$$
+
+  $$rec = \frac{tp}{Real True}=\frac{tp}{tp + fn}$$
 {% endraw %}
 
 Now, what if we have a imbalanced data set? Example, a data set of emails where we have spams one in 100 emails. Which evaluation method is helpful here?
