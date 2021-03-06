@@ -47,12 +47,12 @@ To remedy this issue we can apply one of the following approaches
   * Adding mode hidden layers (in case of neural networks)
 
 
-3- Plotting the decision boundary for SVM models. In classification models using _Support Vector Machine_, the idea is to find a decision boundary between classes, either leaner boundary or non-linear. Plotting can be helpful to see if our classification model is doing a good job or not. You can tune _C_, namely the SVM regularization parameter, to reach the best decisison boundary. Larger _C_ tends to include more outliers inside the decision boundary however can lead to a non-optimal margin between classes.
+3- Plotting the decision boundary for SVM models. In classification models using _Support Vector Machine_, the idea is to find a decision boundary between classes, either linear boundary or non-linear. Plotting can be helpful to see if our classification model is doing a good job or not. You can tune _C_, namely the SVM regularization parameter, to reach the best decisison boundary. Larger _C_ tends to include more outliers inside the decision boundary however can lead to a non-optimal margin between classes.
 The plot below shows linear SVM classifier where _C=1_ but there is an outlier lef out.
 
 ![Decision boundary for linear SVM for C=1](/assets/img/Linear_SVM_C1.JPG "Decision boundary for linear SVM for C=1")
 
-Ande example below shows when _C=100_ the SVM model includes the outlier but the decision boundary is not optimal.
+And example below shows that for _C=100_ the SVM model includes the outlier but the decision boundary is not optimal.
 
 ![Decision boundary for linear SVM for C=100](/assets/img/Linear_SVM_C100.JPG "Decision boundary for linear SVM for C=100")
 
