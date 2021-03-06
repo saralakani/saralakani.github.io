@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Comparing Email spam classifier models
-thumbnail-img: /assets/img/validation.png
-tags: [Model Validation, Model Performance, Model tuning, Machine learning, Supervised Learning]
+thumbnail-img: /assets/img/spam-mail.jpg
+tags: [Spam classification, SVM, Anomaly detection]
 usemathjax: true
 published: false
 ---
