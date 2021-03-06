@@ -9,12 +9,12 @@ tags: [Model Validation, Model Performance, Model tuning, Machine learning, Supe
 usemathjax: true
 ---
 
-In all machine learning models, there is ways to check whether your model is working as expected. There are standardized ways to validate the model and if needed, tune it up. It is required to emphasis here on the importance of deviding data into three categories of Traininf, cross-validation and test set, to be able to benchmark the performance of your model. The rule of thumb is to assign the larger portion to training set and dedive the reamainings equaly between cross-validation and test data sets, an example woulde be 60% training, and 20% test and cross-validation each. 
+In all machine learning models, there is ways to check whether your model is working as expected. There are standardized ways to validate the model and if needed, tune it up. It is required to emphasis here on the importance of dividing data into three categories of Training, cross-validation and test set, to be able to benchmark the performance of your model. The rule of thumb is to assign the larger portion to training set and divide the reamainings equaly between cross-validation and test data sets, an example woulde be 60% training, and 20% test and cross-validation sets each. 
 
 
-1- Cost function vs iterations. For gradient-descent based models, the general validation method is to check if cost function is decreasing against the increment of iterations.
+1- Checking Cost function vs iterations. For gradient-descent based models, the general validation method is to validate if cost function is decreasing against the increment of iterations. Otherwise, the model needs to be corrected. For this validation method, plotiing is cost function over iterations (epochs) is a common practice.
 
-2- The Learning Curve. In this method we are trying to find out if the training set size is large enough to provide us with a reliable model or not. In this regard we need to run our training algorithm several times with various training set sizes. Then, we plot the error of cross-validation data set against the size of training set that our model has been trained on. In the same plot we want to draw the error of training set. Analysis on the behaviour of these two trends against each other is a good guage for tuning the model parameters and improve the performance. Before diving into details of learning curve validation, I first explain two main deficiencies that ML models often suffer from; High Bias and High variance.
+2- Checking the Learning Curve. In this method we are trying to find out the best size for the training set. In this regard we need to run our training algorithm several times with various training set sizes. Then, we plot the error of cross-validation data set against the size of training set that our model has been trained on. In the same plot, we want to draw the error of training set as well. Analysis on the behaviour of these two trends against each other is a good guage for tuning the model parameters and improve the performance. Before diving into details of learning curve validation, I first explain two main deficiencies that ML models often suffer from; which are known as High Bias and High variance.
 
 * High Variance: This deficiency is also known as Overfitting. As a reminder, overfitting means our model is too fitted for the training set that it cannot do a good job on test data set. This problem can happen when
 
@@ -23,6 +23,10 @@ In all machine learning models, there is ways to check whether your model is wor
   * We have too many polynomial terms in our feature vector
   * Our raining set is not large enough; this also called a low-bias model
 
+Example below shows a high variance polynomial regression model where the training error is very low but the cross-validation error is high, meaning the model is overfitting the training data.
+
+![Learning Curve for High Variance example](/assets/img/high_variance.JPG "High Variance model example")
+
   To remedy the issue of too many features, there are couple of approaches:
 
   * Reducing features using feature-selection algorithms.
@@ -30,12 +34,17 @@ In all machine learning models, there is ways to check whether your model is wor
         
   Note: Regularization is a way to reduce the magnitude of parameters( known as weights in some contexts) in ML models. The regularization variable known as $$lambda$$ is  multiplied to the sum of squared of model parameters and the final product is added to the cost function, where we call it a regularized cost function.
 
-  Chosing a good $$lambda$$ can be a bit tricky and needs some validation approaches. Choosing a too large $$lambda$$ value can lead to underfitting while too small $$lambda$$ may not help with overfitting.
+  Choosing a good $$lambda$$ can be a bit tricky and needs some validation approaches. Choosing a too large $$lambda$$ value can lead to underfitting while too small $$lambda$$ may not help with overfitting.
 
 
-* High Bias: This deficiency is also known as Underfitting and is the opossite of high variance situations. To remedy this issue we can apply one of the following approaches
+* High Bias: This deficiency is also known as Underfitting and is the opossite of high variance situations. 
+In high bias situation we often see the learning curve as below, where this particular linear regression model is too simple and is unable to fit our dataset well.
+
+![Learning Curve for High Bias example](/assets/img/high_bias.JPG "High Bias model example")
+
+To remedy this issue we can apply one of the following approaches
   * Increase the number of features. One of such methods is known as "feature Mapping". the method is to add polynomial terms of your current features. For example if you have only two features $${x_1,x_2}$$ you can introduce powers and polinomial terms and increase number of feature like $${x_1,x_2,x_1x_2,x_1^2,x_2^2,x_1x_2^2,x_2x_1^2,...}$$.
-  * Adding mode hidden layers
+  * Adding mode hidden layers (in case of neural networks)
 
 
 3- Plotting the decision boundary.
