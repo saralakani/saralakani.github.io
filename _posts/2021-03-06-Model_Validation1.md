@@ -61,7 +61,7 @@ To remedy this issue we can apply one of the following approaches
 | **Predicted True** | True Positive (tp)  | False Positive (fp)|
 |**Predicted False** | False Negative (fn) | True Negative |
 
-The \(F_1\) score is computed using precision (prec) and recall (rec):
+The $$F_1$$ score is computed using precision (prec) and recall (rec):
 
 {% raw %}
   $$F_1 = \frac{2 ( prec)(rec)}{prec + rec}$$

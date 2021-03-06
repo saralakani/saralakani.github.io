@@ -4,6 +4,7 @@ title: How I made my first Github page
 subtitle: Descriptions of steps and resources I used
 thumbnail-img: /assets/img/github_pages.jpg
 share-img: /assets/img/github_pages.jpg
+usemathjax: true
 tags: [Github pages, Jekyll]
 ---
 
@@ -54,6 +55,28 @@ As soon as you learn about Github pages, the word [Jekyll](https://docs.github.c
  If all the steps have been completed successfully, your website is ready for public access under the link address _yourgithubusername.github.io_ .
 
 Last tip for writing posts or pages, it is by far easier to write them in markdown language than HTML. I tried this short [tutorial on Markdown](https://www.markdowntutorial.com/) which gives you a good foundation.
+
+Update March 6,2021:
+
+To be able to have math formulas in your Jekyll-based github pages, you need to enable the already supported MathJax package. First make sure the markdown style is Kramdown by checking your YAML file to have 
+
+      markdown: kramdown
+
+
+Then, go ahead and add following code in your _head.html_ inside *_includes* folder:
+
+      {% if page.usemathjax %}
+      <script type="text/javascript" async
+         src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+      </script>
+      {% endif %}
+
+Then on the page that you want to use formulas, put
+
+       usemathjax: true 
+       
+in the front matter of your page. Now you can wrap your latex-formatted formula with _$$_ either inline or in a display block. Good luck!
+
 
 
 
