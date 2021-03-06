@@ -6,6 +6,7 @@ title: Feature engineerng in Anomaly detection
 #thumbnail-img: /assets/img/validation.png
 #share-img: /assets/img/path.jpg
 tags: [Anomaly detection, feature engineering]
+published: false
 ---
 
 Anomaly detection Algorithms works best with Gausssian data, so if we plot our data and see it is not Gaaussian, we can use various transformations to transform them into Gaussian distribution data. Examples of transformation are
