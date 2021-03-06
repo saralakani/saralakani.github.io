@@ -51,7 +51,7 @@ To remedy this issue we can apply one of the following approaches
 
 * If you observed the decision boundry is not linear, you can use feature mapping to introduce non-linear features.
 
-4- Model accuracy: squared mean of error
+4- Model accuracy: This evaluation metric is mostly implemented by calculating squared mean of error on your test data set.
 
 5- Confusion Matrix. This matrix help us to gaugae the performance of our model, specifically when using logistic regression and we want to tune the threshold of activation function. In this appraoch we need to populate the confucion matrix each time we tune the threshold. Then we can calculate the Precision (or Positive Predictive Value) and recall (or sensitivity) values and accordingly the $$F_1$$-Score, as defined below.
 
@@ -74,3 +74,5 @@ The $$F_1$$ score is computed using precision (prec) and recall (rec):
 {% endraw %}
 
 Now, what if we have a imbalanced data set? Example, a data set of emails where we have spams one in 100 emails. Which evaluation method is helpful here?
+
+*Refrence: Machine Learning course by Andrew NG, available for free in Coursera!*
