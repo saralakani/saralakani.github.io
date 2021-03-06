@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Example of dara preparation
+title: Data Prep before ML implementation
 subtitle: A trial with LTE/5G Radio Access Network data
 #cover-img: /assets/img/path.jpg
 thumbnail-img: /assets/img/5G_logo.png
